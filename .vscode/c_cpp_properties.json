@@ -1,0 +1,23 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/third_party/gemmlowp/eight_bit_int_gemm",
+                "${workspaceFolder}/third_party/gemmlowp/fixedpoint",
+                "${workspaceFolder}/third_party/gemmlowp/internal",
+                "${workspaceFolder}/third_party/gemmlowp/meta",
+                "${workspaceFolder}/third_party/gemmlowp/profiling",
+                "${workspaceFolder}/third_party/gemmlowp/public",
+                "/home/tz/anaconda3/envs/cxx/include"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/g++",
+            "cStandard": "gnu17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "linux-gcc-x64"
+            // "compileCommands": "${workspaceFolder}/build/compile_commands.json"
+        }
+    ],
+    "version": 4
+}
