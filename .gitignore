@@ -1,3 +1,5 @@
+third_party/cutlass-3.2.1/*
+
 # Prerequisites
 *.d
 
