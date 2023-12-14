@@ -1,6 +1,15 @@
 ### List of algorithm
 
 - [ ] base
+- [ ] [Eigen](https://gitlab.com/libeigen/eigen)
+- [ ] BLAS (Basic Linear Algebra Subprograms) OpenBLAS, Intel MKL
+- [ ] [MKL Intel Math Kernel Library](https://github.com/oneapi-src/oneMKL)
+- [ ] [OpenBLAS](https://github.com/OpenMathLib/OpenBLAS)
+- [ ] cuBLAS
+- [ ] [Armadillo](https://github.com/conradsnicta/armadillo-code)
+- [ ] [Thrust](https://github.com/NVIDIA/thrust)
+- [ ] [ATLAS - Automatically Tuned Linear Algebra Software](https://github.com/math-atlas/math-atlas)
+
 - [ ] [gemmlowp](https://github.com/google/gemmlowp/)
 - [ ] [ruy](https://github.com/google/ruy)
 - [ ] [FBGEMM](https://github.com/pytorch/FBGEMM)
