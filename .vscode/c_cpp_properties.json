@@ -9,7 +9,7 @@
                 "${workspaceFolder}/third_party/gemmlowp/meta",
                 "${workspaceFolder}/third_party/gemmlowp/profiling",
                 "${workspaceFolder}/third_party/gemmlowp/public",
-                "${workspaceFolder}/third_party/cutlass-3.2.1/install/include",
+                "${workspaceFolder}/third_party/cutlass/install/include",
                 "/home/tz/anaconda3/envs/cxx/include"
             ],
             "defines": [],

@@ -14,8 +14,8 @@
                 "-I${workspaceFolder}/third_party/gemmlowp/meta",
                 "-I${workspaceFolder}/third_party/gemmlowp/profiling",
                 "-I${workspaceFolder}/third_party/gemmlowp/public",
-                "-I${workspaceFolder}/third_party/cutlass-3.2.1/install/include",
-                "-L${workspaceFolder}/third_party/cutlass-3.2.1/install/lib"
+                "-I${workspaceFolder}/third_party/cutlass/install/include",
+                "-L${workspaceFolder}/third_party/cutlass/install/lib"
             ],
             "options": {
                 "cwd": "${fileDirname}"
