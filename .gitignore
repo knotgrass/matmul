@@ -1,4 +1,4 @@
-third_party/cutlass-3.2.1/*
+.vscode/settings.json
 
 # Prerequisites
 *.d
