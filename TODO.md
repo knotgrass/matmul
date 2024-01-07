@@ -9,6 +9,7 @@
 - [ ] [Armadillo](https://github.com/conradsnicta/armadillo-code)
 - [ ] [Thrust](https://github.com/NVIDIA/thrust)
 - [ ] [ATLAS - Automatically Tuned Linear Algebra Software](https://github.com/math-atlas/math-atlas)
+- [ ] [blaze](https://bitbucket.org/blaze-lib/blaze/src/master/)
 
 - [ ] [gemmlowp](https://github.com/google/gemmlowp/)
 - [ ] [ruy](https://github.com/google/ruy)
