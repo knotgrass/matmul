@@ -1,0 +1,42 @@
+/usr/bin/g++ -fdiagnostics-color=always -std=c++17 -g -pthread \
+  /home/tz/Documents/myproject/matmul/src/example.cc \
+  -o /home/tz/Documents/myproject/matmul/src/ruy \
+  -I/home/tz/Documents/myproject/matmul/third_party/googletest-1.14.0/install/include \
+  -L/home/tz/Documents/myproject/matmul/third_party/googletest-1.14.0/install/lib \
+  -I/home/tz/Documents/myproject/matmul/third_party/cpuinfo/install/include \
+  -L/home/tz/Documents/myproject/matmul/third_party/cpuinfo/install/lib \
+  -I/home/tz/Documents/myproject/matmul/third_party/ruy/install/include \
+  -L/home/tz/Documents/myproject/matmul/third_party/ruy/install/lib \
+  -lruy_have_built_path_for_avx \
+  -lruy_frontend -lruy_tune \
+  -lruy_pack_avx512 \
+  -lruy_denormal \
+  -lruy_blocking_counter \
+  -lruy_pack_arm \
+  -lruy_context \
+  -lruy_kernel_avx2_fma \
+  -lruy_kernel_arm \
+  -lruy_prepacked_cache \
+  -lruy_system_aligned_alloc \
+  -lruy_block_map \
+  -lruy_context_get_ctx \
+  -lruy_apply_multiplier \
+  -lruy_wait \
+  -lruy_have_built_path_for_avx512 \
+  -lruy_pack_avx2_fma \
+  -lruy_cpuinfo \
+  -lruy_kernel_avx512 \
+  -lruy_thread_pool \
+  -lruy_have_built_path_for_avx2_fma \
+  -lruy_profiler_instrumentation \
+  -lruy_profiler_profiler \
+  -lruy_pack_avx \
+  -lruy_ctx \
+  -lruy_allocator \
+  -lruy_trmul \
+  -lruy_kernel_avx \
+  -lruy_prepare_packed_matrices \
+  -lgmock_main \
+  -lgtest_main \
+  -lgmock \
+  -lgtest
