@@ -6,11 +6,13 @@ cd "$workspaceFolder"
 mkdir -p third_party
 
 # git submodule add https://github.com/pytorch/cpuinfo third_party/cpuinfo
-cd third_party/cpuinfo
-git checkout 2f4c278f7aa3e9a451c14c3e9a02c3e091140d96
+cd third_party
+# git clone https://github.com/pytorch/cpuinfo
+cd cpuinfo
+git checkout 76cc10d627add77922dc24521b332a055a4d6d77
 
 mkdir -p build && cd build
-cmake .. -DCMAKE_INSTALL_PREFIX=$workspaceFolder/third_party/cpuinfo/install
+cmake .. -DCMAKE_INSTALL_PREFIX=$workspaceFolder/Libs/cpuinfo
 make all
 make install
 
