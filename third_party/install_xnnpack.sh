@@ -9,7 +9,7 @@ mkdir -p third_party
 cd third_party
 # git clone https://github.com/google/XNNPACK.git
 cd XNNPACK
-git checkout 3bc4ef01bbdf488556c54584fc2419dd77c39c85
+git checkout 403565683d0b559e535a4f9b2fb5d3786e94ddae
 
 mkdir -p build && cd build
 cmake .. -DCMAKE_INSTALL_PREFIX=$workspaceFolder/Libs/XNNPACK
