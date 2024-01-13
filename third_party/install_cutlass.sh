@@ -7,14 +7,16 @@ cd "$workspaceFolder"
 mkdir -p third_party
 
 # git submodule add https://github.com/NVIDIA/cutlass third_party/cutlass
-cd third_party/cutlass
+cd third_party
+# git clone https://github.com/NVIDIA/cutlass.git
+cd cutlass
 git checkout v3.3.0
 
 export CUDACXX=/home/tz/anaconda3/envs/cxx/bin/nvcc
 
-mkdir build && cd build
+mkdir -p build && cd build
 cmake .. \
-    -DCMAKE_INSTALL_PREFIX=$workspaceFolder/third_party/cutlass/install \
+    -DCMAKE_INSTALL_PREFIX=$workspaceFolder/Libs/cutlass \
     -DCUTLASS_NVCC_ARCHS=75 \
     -DCUTLASS_ENABLE_TESTS=ON \
     -DCUTLASS_UNITY_BUILD_ENABLED=ON
