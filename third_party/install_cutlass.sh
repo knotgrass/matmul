@@ -10,7 +10,7 @@ mkdir -p third_party
 cd third_party
 # git clone https://github.com/NVIDIA/cutlass.git
 cd cutlass
-git checkout v3.3.0
+git checkout v3.4.0
 
 export CUDACXX=/home/tz/anaconda3/envs/cxx/bin/nvcc
 
@@ -21,7 +21,7 @@ cmake .. \
     -DCUTLASS_ENABLE_TESTS=ON \
     -DCUTLASS_UNITY_BUILD_ENABLED=ON
 
-make default_target -j16
+make default_target -j$(nproc)
 make install
 
 
