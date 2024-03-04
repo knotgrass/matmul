@@ -12,7 +12,7 @@ cd third_party
 cd googletest
 git checkout v$version
 
-mkdir build
+mkdir -p build
 cd build
 
 # Install in /usr/local/ by default
@@ -23,5 +23,5 @@ cd build
 cmake ../ -DCMAKE_INSTALL_PREFIX=$workspaceFolder/Libs/googletest
 
 make -j$(nproc)
-sudo make install
+make install
 cd "$workspaceFolder"
