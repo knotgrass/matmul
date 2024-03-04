@@ -1,6 +1,7 @@
 #! /bin/bash
 
-version=1.14.0
+# use lastest commit of brand of v1.14.0
+commit=f8d7d77c06936315286eb55f8de22cd23c188571
 workspaceFolder="$(dirname "$(dirname "$(realpath "$0")")")"
 cd "$workspaceFolder"
 
@@ -10,7 +11,7 @@ mkdir -p third_party
 cd third_party
 # git clone https://github.com/google/googletest.git
 cd googletest
-git checkout v$version
+git checkout $commit
 
 mkdir -p build
 cd build
