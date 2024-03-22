@@ -10,6 +10,7 @@
 - [ ] [Thrust](https://github.com/NVIDIA/thrust)
 - [ ] [ATLAS - Automatically Tuned Linear Algebra Software](https://github.com/math-atlas/math-atlas)
 - [ ] [blaze](https://bitbucket.org/blaze-lib/blaze/src/master/)
+- [ ] [google highway](https://github.com/google/highway)
 
 - [ ] [gemmlowp](https://github.com/google/gemmlowp/)
 - [ ] [ruy](https://github.com/google/ruy)
