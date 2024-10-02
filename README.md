@@ -6,4 +6,5 @@
 * [quantamagazine.org](https://www.quantamagazine.org/new-breakthrough-brings-matrix-multiplication-closer-to-ideal-20240307/)
 * [A Set of Level 3 Basic Linear Algebra Subprograms](https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=eabf5085474368d59a03a3a832d64ead902783c6)
 * [Introduction to BLAS](https://www.ni.com/docs/en-US/bundle/labview/page/basic-linear-algebra-subroutines.html)
+* [Introduction to BLAS](https://fedoramagazine.org/introduction-to-blas/)
 </details>
