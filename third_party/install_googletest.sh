@@ -1,7 +1,7 @@
 #! /bin/bash
 
-# use lastest commit of brand of v1.14.0
-commit=f8d7d77c06936315286eb55f8de22cd23c188571
+# use lastest commit of brand of v1.15.2
+commit=b514bdc898e2951020cbdca1304b75f5950d1f59
 workspaceFolder="$(dirname "$(dirname "$(realpath "$0")")")"
 cd "$workspaceFolder"
 
