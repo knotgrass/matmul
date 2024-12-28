@@ -1,8 +1,7 @@
 #include <iostream>
 #include <cstdlib>
-#include <chrono>
+#include <benchmark/benchmark.h>
 
-using namespace std::chrono;
 
 /**
  * @brief Initializes a matrix with a given value.
@@ -59,90 +58,66 @@ void matmul(int m, int n, int p, T **A, T **B, T **C)
     }
 }
 
-/**
- * @brief The main function of the program.
- *
- * This function performs the following steps:
- * 1. Parses command-line arguments to get matrix dimensions.
- * 2. Allocates memory for matrices `A`, `B`, and `C`.
- * 3. Initializes matrices `A` and `B` with specific values.
- * 4. Performs matrix multiplication and measures execution time.
- * 5. Outputs the time taken for the multiplication.
- * 6. Releases the allocated memory.
- *
- * @param argc The number of command-line arguments.
- * @param argv The array of command-line arguments.
- *             - argv[1]: Number of rows in matrix `A` and `C` (m).
- *             - argv[2]: Number of columns in matrix `A` and rows in matrix `B` (n).
- *             - argv[3]: Number of columns in matrix `B` and `C` (p).
- * @return 0 if the program executes successfully, 1 if there is an error.
- */
-int main(int argc, char *argv[])
+// Benchmark function
+static void BenchmarkMatmul(benchmark::State &state)
 {
-    if (argc < 4)
-    {
-        std::cerr << "Usage: " << argv[0] << " <m> <n> <p>" << std::endl;
-        return 1;
-    }
+    int m = state.range(0);
+    int n = state.range(1);
+    int p = state.range(2);
 
-    int m = std::atoi(argv[1]);
-    int n = std::atoi(argv[2]);
-    int p = std::atoi(argv[3]);
-
-    // step 1: Allocate matrix A memory m*n
+    // Allocate matrix A memory m*n
     float **A = new float *[m];
     for (int i = 0; i < m; i++)
-    {
         A[i] = new float[n];
-    }
 
-    // step 2: Allocate matrix B memory n*p
+    // Allocate matrix B memory n*p
     float **B = new float *[n];
     for (int i = 0; i < n; i++)
-    {
         B[i] = new float[p];
-    }
 
-    // step 3: Allocate matrix C memory m*p
+    // Allocate matrix C memory m*p
     float **C = new float *[m];
     for (int i = 0; i < m; i++)
-    {
         C[i] = new float[p];
-    }
 
-    // step 4: Initialize matrix A
+    // Initialize matrix A, B and C must be initialized to zero
     init_matrix_value<float>(m, n, A, 1.0);
     init_matrix_value<float>(n, p, B, 2.0);
     init_matrix_value<float>(m, p, C, 0.0);
 
-    // step 5: Matrix multiplication
-    auto t = std::chrono::high_resolution_clock::now();
-    matmul(m, n, p, A, B, C);
-    auto tt = std::chrono::high_resolution_clock::now();
-    auto duration = std::chrono::duration_cast<nanoseconds>(tt - t);
-    std::cout << "Time: " << duration.count() << " nanoseconds" << std::endl;
+    // Run the benchmark
+    for (auto _ : state)
+        matmul(m, n, p, A, B, C);
 
-    // step 6: Release memory
+    // Clean up memory
     for (int i = 0; i < m; i++)
         delete[] A[i];
-
     for (int i = 0; i < n; i++)
         delete[] B[i];
-
     for (int i = 0; i < m; i++)
         delete[] C[i];
-
     delete[] A;
     delete[] B;
     delete[] C;
-
-    return 0;
 }
 
-/*shell
-/usr/bin/g++ -fdiagnostics-color=always -std=c++17 -g -O0 \
-    src/Efficient_matmul/naive.cc \
-    -o bin/matmul
+BENCHMARK(BenchmarkMatmul)
+    ->Args({128, 128, 128})
+    ->Args({256, 256, 256})
+    ->Args({512, 512, 512})
+    ->Args({1024, 1024, 1024})
+    ->Args({2048, 2048, 2048});
 
-./bin/matmul 1000 1000 1000
+// Main entry point for the benchmark
+BENCHMARK_MAIN();
+
+/*shell
+/usr/bin/g++ src/Efficient_matmul/serial_mm.cc \
+    -std=c++17 -O0 \
+    -o ./bin/benchmark_matmul \
+    -L/home/tz/Documents/myproject/matmul/Libs/benchmark/lib \
+    -I/home/tz/Documents/myproject/matmul/Libs/benchmark/include \
+    -lbenchmark -lpthread
+
+./bin/benchmark_matmul
 */
