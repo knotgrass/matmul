@@ -42,7 +42,7 @@ void init_matrix_value(int row, int col, T **mat, T value)
  * @param p The number of columns in matrix `B` and `C`.
  * @param A The first input matrix (m x n).
  * @param B The second input matrix (n x p).
- * @param C The result matrix (m x p).
+ * @param C The result matrix (m x p). It must be initialized to zero.
  */
 template <typename T>
 void matmul(int m, int n, int p, T **A, T **B, T **C)
@@ -51,7 +51,6 @@ void matmul(int m, int n, int p, T **A, T **B, T **C)
     {
         for (int j = 0; j < p; j++)
         {
-            T C[i][j] = {0};
             for (int k = 0; k < n; k++)
             {
                 C[i][j] += A[i][k] * B[k][j];
@@ -114,6 +113,7 @@ int main(int argc, char *argv[])
     // step 4: Initialize matrix A
     init_matrix_value<float>(m, n, A, 1.0);
     init_matrix_value<float>(n, p, B, 2.0);
+    init_matrix_value<float>(m, p, C, 0.0);
 
     // step 5: Matrix multiplication
     auto t = std::chrono::high_resolution_clock::now();
