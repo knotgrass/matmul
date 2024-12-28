@@ -1,14 +1,14 @@
 #! /bin/bash
 
-version=1.8.3
+version=1.9.1
 workspaceFolder="$(dirname "$(dirname "$(realpath "$0")")")"
 cd $workspaceFolder
 mkdir -p third_party
-git submodule add https://github.com/google/benchmark.git third_party/benchmark
+# git submodule add https://github.com/google/benchmark.git third_party/benchmark
 cd third_party
 
 #1
-# git clone https://github.com/google/benchmark.git
+git clone https://github.com/google/benchmark.git
 cd benchmark
 git checkout v$version
 
