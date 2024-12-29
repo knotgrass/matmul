@@ -12,7 +12,7 @@ cd XNNPACK
 git checkout 403565683d0b559e535a4f9b2fb5d3786e94ddae
 
 mkdir -p build && cd build
-cmake .. -DCMAKE_INSTALL_PREFIX=$workspaceFolder/Libs/XNNPACK
+cmake .. -DCMAKE_INSTALL_PREFIX=$workspaceFolder/libs/XNNPACK
 make all -j$(nproc)
 make install
 

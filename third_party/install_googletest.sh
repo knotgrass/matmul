@@ -21,7 +21,7 @@ cd build
 # cmake ../
 
 # https://github.com/google/googletest/issues/868#issuecomment-245593106
-cmake ../ -DCMAKE_INSTALL_PREFIX=$workspaceFolder/Libs/googletest
+cmake ../ -DCMAKE_INSTALL_PREFIX=$workspaceFolder/libs/googletest
 
 make -j$(nproc)
 make install

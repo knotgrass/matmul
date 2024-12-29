@@ -14,7 +14,7 @@ git checkout v$version
 #2
 cmake -S . -B build -G "Unix Makefiles" \
     -DCMAKE_BUILD_TYPE=Release \
-    -DCMAKE_INSTALL_PREFIX=$workspaceFolder/Libs/glog
+    -DCMAKE_INSTALL_PREFIX=$workspaceFolder/libs/glog
 #3
 cmake --build build
 #4

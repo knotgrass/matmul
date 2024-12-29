@@ -17,7 +17,7 @@ cmake -E make_directory "build"
 cmake -E chdir "build" cmake \
     -DBENCHMARK_DOWNLOAD_DEPENDENCIES=on \
     -DCMAKE_BUILD_TYPE=Release ../ \
-    -DCMAKE_INSTALL_PREFIX=$workspaceFolder/Libs/benchmark
+    -DCMAKE_INSTALL_PREFIX=$workspaceFolder/libs/benchmark
 
 #3 Build the library.
 cmake --build "build" --config Release

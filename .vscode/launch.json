@@ -12,7 +12,7 @@
             "environment": [
                 {
                     "name": "LD_LIBRARY_PATH",
-                    "value": "/home/tz/anaconda3/envs/cxx/lib:${workspaceFolder}/Libs/cutlass/install/lib"
+                    "value": "/home/tz/anaconda3/envs/cxx/lib:${workspaceFolder}/libs/cutlass/install/lib"
                 }
             ],
             "externalConsole": false,

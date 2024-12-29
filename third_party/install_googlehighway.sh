@@ -18,7 +18,7 @@ sudo apt install libgtest-dev
 
 mkdir -p build && cd build
 cmake .. \
-    -DCMAKE_INSTALL_PREFIX=$workspaceFolder/Libs/highway
+    -DCMAKE_INSTALL_PREFIX=$workspaceFolder/libs/highway
 
 make -j2 && make test
 

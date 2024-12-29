@@ -8,8 +8,8 @@
             "args": [
                 "-fdiagnostics-color=always", "-std=c++17", "-g", "-pthread",
                 "${file}", "-o", "${fileDirname}/bin/${fileBasenameNoExtension}",
-                "-I${workspaceFolder}/Libs/cutlass/include",
-                "-L${workspaceFolder}/Libs/cutlass/lib"
+                "-I${workspaceFolder}/libs/cutlass/include",
+                "-L${workspaceFolder}/libs/cutlass/lib"
             ],
             "options": {
                 "cwd": "${fileDirname}"

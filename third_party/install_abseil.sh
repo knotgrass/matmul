@@ -24,7 +24,7 @@ cmake .. \
     -DABSL_LOCAL_GOOGLETEST_DIR=$workspaceFolder/third_party/googletest \
     -DCMAKE_CXX_STANDARD=17 \
     -DABSL_PROPAGATE_CXX_STD=ON \
-    -DCMAKE_INSTALL_PREFIX=$workspaceFolder/Libs/abseil-cpp
+    -DCMAKE_INSTALL_PREFIX=$workspaceFolder/libs/abseil-cpp
 # -DABSL_GOOGLETEST_DOWNLOAD_URL=https://github.com/google/googletest/archive/refs/tags/v1.14.0.zip \
 # https://chromium.googlesource.com/external/github.com/abseil/abseil-cpp/+/HEAD/CMake/README.md
 

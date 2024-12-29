@@ -64,8 +64,8 @@ BENCHMARK_MAIN();
 /usr/bin/g++ src/effi/cache_hit.cc \
     -std=c++17 -O0 \
     -o ./bin/benchmark_matmul \
-    -LLibs/benchmark/lib \
-    -ILibs/benchmark/include \
+    -Llibs/benchmark/lib \
+    -Ilibs/benchmark/include \
     -lbenchmark -lpthread
 
 ./bin/benchmark_matmul

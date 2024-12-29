@@ -3,8 +3,8 @@
         {
             "name": "Linux",
             "includePath": [
-                "${workspaceFolder}/Libs/cutlass/include",
-                "${workspaceFolder}/Libs/benchmark/include",
+                "${workspaceFolder}/libs/cutlass/include",
+                "${workspaceFolder}/libs/benchmark/include",
                 "/home/tz/anaconda3/envs/cxx/include"
             ],
             "defines": [],

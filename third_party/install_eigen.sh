@@ -13,7 +13,7 @@ cd eigen
 git checkout e67c494cba7180066e73b9f6234d0b2129f1cdf5
 
 mkdir -p build && cd build
-cmake .. -DCMAKE_INSTALL_PREFIX=$workspaceFolder/Libs/eigen
+cmake .. -DCMAKE_INSTALL_PREFIX=$workspaceFolder/libs/eigen
 make all
 make install
 

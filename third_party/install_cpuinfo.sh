@@ -12,7 +12,7 @@ cd cpuinfo
 git checkout 76cc10d627add77922dc24521b332a055a4d6d77
 
 mkdir -p build && cd build
-cmake .. -DCMAKE_INSTALL_PREFIX=$workspaceFolder/Libs/cpuinfo
+cmake .. -DCMAKE_INSTALL_PREFIX=$workspaceFolder/libs/cpuinfo
 make all
 make install
 

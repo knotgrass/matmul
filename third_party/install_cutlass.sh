@@ -17,7 +17,7 @@ export CUDACXX=/home/tz/anaconda3/envs/cxx/bin/nvcc
 
 mkdir -p build && cd build
 cmake .. \
-    -DCMAKE_INSTALL_PREFIX=$workspaceFolder/Libs/cutlass \
+    -DCMAKE_INSTALL_PREFIX=$workspaceFolder/libs/cutlass \
     -DCUTLASS_NVCC_ARCHS=75 \
     -DCUTLASS_ENABLE_TESTS=ON \
     -DCUTLASS_UNITY_BUILD_ENABLED=ON
