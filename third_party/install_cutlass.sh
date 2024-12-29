@@ -11,7 +11,7 @@ cd third_party
 # git clone https://github.com/NVIDIA/cutlass.git
 cd cutlass
 git checkout main
-git checkout v3.4.1
+git checkout v3.6.0
 
 export CUDACXX=/home/tz/anaconda3/envs/cxx/bin/nvcc
 
