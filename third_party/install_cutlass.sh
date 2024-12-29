@@ -25,6 +25,8 @@ cmake .. \
 make default_target -j$(nproc)
 make install
 
+cd "$workspaceFolder"
+rm -rf third_party/cutlass/build
 
 # make cutlass_profiler -j12
 
