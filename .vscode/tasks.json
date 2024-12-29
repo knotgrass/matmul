@@ -8,12 +8,6 @@
             "args": [
                 "-fdiagnostics-color=always", "-std=c++17", "-g", "-pthread",
                 "${file}", "-o", "${fileDirname}/bin/${fileBasenameNoExtension}",
-                "-I${workspaceFolder}/third_party/gemmlowp/eight_bit_int_gemm",
-                "-I${workspaceFolder}/third_party/gemmlowp/fixedpoint",
-                "-I${workspaceFolder}/third_party/gemmlowp/internal",
-                "-I${workspaceFolder}/third_party/gemmlowp/meta",
-                "-I${workspaceFolder}/third_party/gemmlowp/profiling",
-                "-I${workspaceFolder}/third_party/gemmlowp/public",
                 "-I${workspaceFolder}/third_party/cutlass/install/include",
                 "-L${workspaceFolder}/third_party/cutlass/install/lib"
             ],

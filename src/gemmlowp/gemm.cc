@@ -1,6 +1,13 @@
 #include <iostream>
 #include <gemmlowp/gemmlowp.h>
-
+/*
+"-I${workspaceFolder}/third_party/gemmlowp/eight_bit_int_gemm",
+"-I${workspaceFolder}/third_party/gemmlowp/fixedpoint",
+"-I${workspaceFolder}/third_party/gemmlowp/internal",
+"-I${workspaceFolder}/third_party/gemmlowp/meta",
+"-I${workspaceFolder}/third_party/gemmlowp/profiling",
+"-I${workspaceFolder}/third_party/gemmlowp/public",
+*/
 int main() {
     // Define the dimensions of the matrices
     const int m = 2;  // Number of rows in A
