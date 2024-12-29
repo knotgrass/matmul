@@ -43,40 +43,18 @@ static void BenchmarkMatmul(benchmark::State &state)
     int n = state.range(1);
     int p = state.range(2);
 
-    // Allocate matrix A memory m*n
-    float **A = new float *[m];
-    for (int i = 0; i < m; i++)
-        A[i] = new float[n];
-
-    // Allocate matrix B memory n*p
-    float **B = new float *[n];
-    for (int i = 0; i < n; i++)
-        B[i] = new float[p];
-
-    // Allocate matrix C memory m*p
-    float **C = new float *[m];
-    for (int i = 0; i < m; i++)
-        C[i] = new float[p];
-
-    // Initialize matrix A, B and C must be initialized to zero
-    init_matrix_value<float>(m, n, A, 1.0);
-    init_matrix_value<float>(n, p, B, 2.0);
-    init_matrix_value<float>(m, p, C, 0.0);
+    float **A = create_matrix<float>(m, n, 1.0);
+    float **B = create_matrix<float>(n, p, 2.0);
+    float **C = create_matrix<float>(m, p, 0.0);
 
     // Run the benchmark
     for (auto _ : state)
         matmul(m, n, p, A, B, C);
 
     // Clean up memory
-    for (int i = 0; i < m; i++)
-        delete[] A[i];
-    for (int i = 0; i < n; i++)
-        delete[] B[i];
-    for (int i = 0; i < m; i++)
-        delete[] C[i];
-    delete[] A;
-    delete[] B;
-    delete[] C;
+    release_matrix_memory<float>(m, A);
+    release_matrix_memory<float>(n, B);
+    release_matrix_memory<float>(m, C);
 }
 
 BENCHMARK(BenchmarkMatmul)
@@ -89,12 +67,11 @@ BENCHMARK(BenchmarkMatmul)
 BENCHMARK_MAIN();
 
 /*shell
-/usr/bin/g++ src/Efficient_matmul/serial_mm.cc \
+/usr/bin/g++ src/effi/serial_mm.cc \
     -std=c++17 -O0 \
     -o ./bin/benchmark_matmul \
-    -L/home/tz/Documents/myproject/matmul/Libs/benchmark/lib \
-    -I/home/tz/Documents/myproject/matmul/Libs/benchmark/include \
-    -lbenchmark -lpthread
-
-./bin/benchmark_matmul
+    -LLibs/benchmark/lib \
+    -ILibs/benchmark/include \
+    -lbenchmark -lpthread \
+    && ./bin/benchmark_matmul
 */
