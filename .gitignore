@@ -1,5 +1,5 @@
 .vscode/settings.json
-libs/
+libs/**/
 temp/
 bin/
 build/
