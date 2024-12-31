@@ -16,6 +16,7 @@ git checkout v$version
 cmake -E make_directory "build"
 cmake -E chdir "build" cmake \
     -DBENCHMARK_DOWNLOAD_DEPENDENCIES=on \
+    -DBENCHMARK_ENABLE_THREADS=on \
     -DCMAKE_BUILD_TYPE=Release ../ \
     -DCMAKE_INSTALL_PREFIX=$workspaceFolder/libs/benchmark
 
