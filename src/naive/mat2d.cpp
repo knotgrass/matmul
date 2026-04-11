@@ -7,10 +7,11 @@ using namespace std;
 int matmul2d(float** M, float** N, float** P, int rows, int cols, int inner) {
     for (int i = 0; i < rows; i++) {
         for (int j = 0; j < cols; j++) {
-            P[i][j] = 0.0f;
+            float sum = 0.0f;
             for (int k = 0; k < inner; k++) {
-                P[i][j] += M[i][k] * N[k][j];
+                sum += M[i][k] * N[k][j];
             }
+            P[i][j] = sum;
         }
     }
     return 0;
