@@ -7,7 +7,7 @@ using namespace std;
 int matmul1d(float* M, float* N, float* P, int rows, int cols, int inner) {
     for (int i = 0; i < rows; i++){
         for (int j = 0; j < cols; j++){
-            float sum = 0.0f;  // register variable, avoids aliasing issue
+            float sum = 0.0f;  // register Optimization
             for (int k = 0; k < inner; k++){
                 sum += M[i * inner + k] * N[k * cols + j];
             }
