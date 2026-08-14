@@ -6,7 +6,7 @@
             "label": "C/C++: g++ build active file",
             "command": "/home/tz/anaconda3/envs/cxx/bin/g++",
             "args": [
-                "-fdiagnostics-color=always", "-std=c++17", "-g", "-pthread",
+                "-fdiagnostics-color=always", "-std=c++20", "-g", "-pthread",
                 "${file}", "-o", "${fileDirname}/bin/${fileBasenameNoExtension}",
                 "-I${workspaceFolder}/libs/cutlass/include",
                 "-L${workspaceFolder}/libs/cutlass/lib"
