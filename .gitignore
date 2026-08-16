@@ -4,6 +4,7 @@ temp/
 bin/
 build/
 
+__pycache__/
 # Prerequisites
 *.d
 
